@@ -90,7 +90,7 @@ class EthTesterClient(object):
         self.evm.mine()
 
     def get_coinbase(self):
-        return self.evm.block.coinbase
+        return ethereum_utils.encode_hex(self.evm.block.coinbase)
 
     def _send_transaction(self, _from=None, to=None, gas=None, gas_price=None,
                           value=0, data=''):

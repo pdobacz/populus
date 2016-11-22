@@ -173,7 +173,7 @@ class Project(object):
             _, self._cached_compiled_contracts = compile_project_contracts(
                 project_dir=self.project_dir,
                 contracts_dir=self.contracts_dir,
-                optimize=True,
+                optimize=False,
             )
         return self._cached_compiled_contracts
 
